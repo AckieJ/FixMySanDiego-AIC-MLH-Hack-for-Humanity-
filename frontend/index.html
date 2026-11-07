@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FixMySanDiego</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>FixMySanDiego</h1>
+    <p>Snap a photo of a street hazard. We tag it, map it, and the community votes on what gets fixed first.</p>
+  </header>
+
+  <main>
+    <section class="panel" id="report-panel">
+      <h2>Report an issue</h2>
+      <label class="photo-btn">
+        Take or choose a photo
+        <input type="file" id="photo" accept="image/*" capture="environment" hidden>
+      </label>
+      <img id="preview" alt="" hidden>
+      <p id="status" role="status"></p>
+      <button id="submit" disabled>Submit report</button>
+    </section>
+
+    <section id="map"></section>
+
+    <section class="panel" id="list-panel">
+      <h2>Top priority fixes</h2>
+      <ol id="report-list"></ol>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
